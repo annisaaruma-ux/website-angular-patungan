@@ -17,7 +17,7 @@
             [class.border-bottom]="!last"
           >
             <span class="text-muted px-2">{{ no + 1 }}</span>
-            <div class="flex-grow-1">
+            <div class="flex-grow-1" style="min-width: 0">
               <app-item-row
                 [item]="item"
                 (qtyChange)="setQty(item.id, $event)"

@@ -5,11 +5,12 @@ import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-item-row',
+  host: { class: 'd-block' },
   imports: [Stepper, CurrencyPipe],
   template: `
     @let subtotal = item().price * item().qty;
-    <div class="d-flex align-items-center gap-3 py-2">
-      <div class="flex-grow-1">
+    <div class="d-flex flex-wrap align-items-center gap-3 py-2">
+      <div class="flex-grow-1" style="min-width: 10rem">
         <div class="fw-semibold">{{ item().name }}</div>
         <div class="small text-muted">
           {{ item().price | currency: 'IDR' : 'symbol-narrow' : '1.0-0' }} per porsi
